@@ -1,18 +1,16 @@
 ---
 lab:
-  title: モデルを監視する
-ms.openlocfilehash: d00816159cd605ad7aad2a275471db18411bce4a
+  title: バッチ推論サービスを作成する
+ms.openlocfilehash: b1dfd26b9f440e80500dd3753434ac2a11cad947
 ms.sourcegitcommit: 18f734eeb1031a9cb69c3b294632efd2e69324ac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/17/2021
-ms.locfileid: "137894493"
+ms.locfileid: "137894467"
 ---
-# <a name="monitor-a-model"></a>モデルを監視する
+# <a name="create-a-batch-inferencing-service"></a>バッチ推論サービスを作成する
 
-モデルをサービスとしてデプロイする場合、モデルが処理する要求に関する情報を追跡できると便利です。
-
-Azure Machine Learning は Azure Application Insights と統合され、デプロイされたサービスからデータをログに記録できます。
+多くのシナリオでは、予測モデルを使用して多数のケースをスコアリングするバッチ プロセスとして推論が実行されます。 Azure Machine Learning で、この種の推論ソリューションを実装するために、バッチ推論パイプラインを作成できます。
 
 ## <a name="before-you-start"></a>開始する前に
 
@@ -25,11 +23,11 @@ Azure Machine Learning スタジオの **[ノートブック]** ページを使�
 1. [Azure Machine Learning スタジオ](https://ml.azure.com) で、ワークスペースの **[コンピューティング]** ページを表示し、 **[コンピューティング インスタンス]** タブで、まだ実行されていないコンピューティング インスタンスを起動します。
 2. コンピューティング インスタンスの実行時に、**Jupyter** リンクをクリックして、新しいブラウザー タブで Jupyter のホーム ページを開きます。
 
-## <a name="use-application-insights-to-monitor-a-real-time-service"></a>Application Insights を使用してリアルタイム サービスを監視する
+## <a name="create-a-batch-inferencing-service"></a>バッチ推論サービスを作成する
 
-この演習では、デプロイされた予測サービス用に Application Insights を構成するコードをノートブックで提供します。
+この演習では、モデルをバッチ推論サービスとしてデプロイするためのコードをノートブックで提供します。
 
-1. Jupyter ホーム ページで、ノートブック リポジトリを複製した **/users/*your-user-name*/mslearn-dp100** フォルダーを参照し、**モデルを監視する** ノートブックを開きます。
+1. Jupyter ホーム ページで、ノートブック リポジトリを複製した **/users/*your-user-name*/mslearn-dp100** フォルダーを参照し、**バッチ推論サービスを作成する** ノートブックを開きます。
 2. 次に、ノートブック内の注意事項を読み、各コード セルを順番に実行します。
 3. ノートブック内のコードの実行が終了したら、 **[ファイル]** メニューの **[閉じて停止]** をクリックして閉じ、Python カーネルをシャットダウンします。 その後、すべての Jupyter ブラウザー タブを閉じます。
 

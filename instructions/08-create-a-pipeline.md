@@ -1,18 +1,16 @@
 ---
 lab:
-  title: モデルを監視する
-ms.openlocfilehash: d00816159cd605ad7aad2a275471db18411bce4a
+  title: パイプラインを作成する
+ms.openlocfilehash: d76c9c66876fcb03aa02d48ee47ae92e327dd8c9
 ms.sourcegitcommit: 18f734eeb1031a9cb69c3b294632efd2e69324ac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/17/2021
-ms.locfileid: "137894493"
+ms.locfileid: "137894521"
 ---
-# <a name="monitor-a-model"></a>モデルを監視する
+# <a name="create-a-pipeline"></a>パイプラインを作成する
 
-モデルをサービスとしてデプロイする場合、モデルが処理する要求に関する情報を追跡できると便利です。
-
-Azure Machine Learning は Azure Application Insights と統合され、デプロイされたサービスからデータをログに記録できます。
+Azure Machine Learning の SDK を使用して、Azure での機械学習ソリューションの作成と操作に必要なすべてのタスクを実行できます。 これらのタスクを個別に実行するのではなく、"*パイプライン*" を使用して、データの準備、トレーニング スクリプトの実行、モデルの登録、およびその他のタスクに必要な手順を調整できます。
 
 ## <a name="before-you-start"></a>開始する前に
 
@@ -25,11 +23,11 @@ Azure Machine Learning スタジオの **[ノートブック]** ページを使�
 1. [Azure Machine Learning スタジオ](https://ml.azure.com) で、ワークスペースの **[コンピューティング]** ページを表示し、 **[コンピューティング インスタンス]** タブで、まだ実行されていないコンピューティング インスタンスを起動します。
 2. コンピューティング インスタンスの実行時に、**Jupyter** リンクをクリックして、新しいブラウザー タブで Jupyter のホーム ページを開きます。
 
-## <a name="use-application-insights-to-monitor-a-real-time-service"></a>Application Insights を使用してリアルタイム サービスを監視する
+## <a name="create-and-publish-a-pipeline"></a>パイプラインを作成して発行する
 
-この演習では、デプロイされた予測サービス用に Application Insights を構成するコードをノートブックで提供します。
+この演習では、パイプラインを作成し発行するためのコードをノートブックで提供します。
 
-1. Jupyter ホーム ページで、ノートブック リポジトリを複製した **/users/*your-user-name*/mslearn-dp100** フォルダーを参照し、**モデルを監視する** ノートブックを開きます。
+1. Jupyter ホーム ページで、ノートブック リポジトリを複製した **/users/*your-user-name*/mslearn-dp100** フォルダーを参照し、**パイプラインを作成する** ノートブックを開きます。
 2. 次に、ノートブック内の注意事項を読み、各コード セルを順番に実行します。
 3. ノートブック内のコードの実行が終了したら、 **[ファイル]** メニューの **[閉じて停止]** をクリックして閉じ、Python カーネルをシャットダウンします。 その後、すべての Jupyter ブラウザー タブを閉じます。
 

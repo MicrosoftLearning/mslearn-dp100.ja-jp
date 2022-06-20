@@ -1,18 +1,16 @@
 ---
 lab:
-  title: モデルを監視する
-ms.openlocfilehash: d00816159cd605ad7aad2a275471db18411bce4a
-ms.sourcegitcommit: 18f734eeb1031a9cb69c3b294632efd2e69324ac
+  title: モデルをトレーニングする
+ms.openlocfilehash: dffa9edda34c599dfbd372fe898ddcf955f6f200
+ms.sourcegitcommit: 66d8872bc3d24c2121e225be132b56f4df7920ac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "137894493"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "138597263"
 ---
-# <a name="monitor-a-model"></a>モデルを監視する
+# <a name="train-models"></a>モデルをトレーニングする
 
-モデルをサービスとしてデプロイする場合、モデルが処理する要求に関する情報を追跡できると便利です。
-
-Azure Machine Learning は Azure Application Insights と統合され、デプロイされたサービスからデータをログに記録できます。
+機械学習は主に、アプリケーションに予測サービスを提供するために使用できるモデルのトレーニングに関するものです。 この演習では、Azure Machine Learning の実験を使用してトレーニング スクリプトを実行する方法と、結果としてトレーニングされたモデルを登録する方法について学びます。
 
 ## <a name="before-you-start"></a>開始する前に
 
@@ -25,11 +23,13 @@ Azure Machine Learning スタジオの **[ノートブック]** ページを使�
 1. [Azure Machine Learning スタジオ](https://ml.azure.com) で、ワークスペースの **[コンピューティング]** ページを表示し、 **[コンピューティング インスタンス]** タブで、まだ実行されていないコンピューティング インスタンスを起動します。
 2. コンピューティング インスタンスの実行時に、**Jupyter** リンクをクリックして、新しいブラウザー タブで Jupyter のホーム ページを開きます。
 
-## <a name="use-application-insights-to-monitor-a-real-time-service"></a>Application Insights を使用してリアルタイム サービスを監視する
+> **ヒント**: Python 初心者の場合は、 [Python チート シート](cheat-sheets/dp100-cheat-sheet-python.pdf)を参照すると、コードについて理解できます。 機械学習初心者の場合は、 [機械学習の概要](cheat-sheets/dp100-cheat-sheet-machine-learning.pdf)のページを参照すると、Azure Machine Learning の機械学習プロセスの簡単な概要を把握できます。
 
-この演習では、デプロイされた予測サービス用に Application Insights を構成するコードをノートブックで提供します。
+## <a name="train-models-using-the-azure-machine-learning-sdk"></a>Azure Machine Learning SDK を使用してモデルをトレーニングする
 
-1. Jupyter ホーム ページで、ノートブック リポジトリを複製した **/users/*your-user-name*/mslearn-dp100** フォルダーを参照し、**モデルを監視する** ノートブックを開きます。
+この演習では、モデルをトレーニングするためのコードをノートブックで提供します。
+
+1. Jupyter ホーム ページで、ノートブック リポジトリを複製した **/users/*your-user-name*/mslearn-dp100** フォルダーを参照し、**Train Models (モデルのトレーニング)** ノートブックを開きます。
 2. 次に、ノートブック内の注意事項を読み、各コード セルを順番に実行します。
 3. ノートブック内のコードの実行が終了したら、 **[ファイル]** メニューの **[閉じて停止]** をクリックして閉じ、Python カーネルをシャットダウンします。 その後、すべての Jupyter ブラウザー タブを閉じます。
 
