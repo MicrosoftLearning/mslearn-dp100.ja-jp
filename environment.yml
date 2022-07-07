@@ -1,13 +1,12 @@
-# Conda environment specification. The dependencies defined in this file will
-# be automatically provisioned for runs with userManagedDependencies=False.
-
-# Details about the Conda environment file format:
-# https://conda.io/docs/user-guide/tasks/manage-environments.html#create-env-file-manually
-
+### YamlMime:Yaml
+ms.openlocfilehash: 4800e1af9361339c2af6b3341f325109179c5ac4
+ms.sourcegitcommit: 18f734eeb1031a9cb69c3b294632efd2e69324ac
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "145884965"
 name: simple_environment
 dependencies:
-  # The python interpreter version.
-  # Currently Azure ML only supports 3.5.2 and later.
 - python=3.6.2
 - scikit-learn
 - pandas
@@ -15,4 +14,3 @@ dependencies:
 - pip:
   - azureml-defaults
   - azureml-mlflow
-
